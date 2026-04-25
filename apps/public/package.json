@@ -1,0 +1,35 @@
+{
+  "name": "public",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "WATCHPACK_POLLING=true WATCHPACK_POLLING_INTERVAL=1000 CHOKIDAR_USEPOLLING=true CHOKIDAR_INTERVAL=1000 next dev -p 3002",
+    "build": "next build",
+    "start": "next start -p 3002",
+    "lint": "echo \"Lint not configured yet\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@feedchat/api-base": "*",
+    "@feedchat/server": "*",
+    "@feedchat/ui": "*",
+    "@heroicons/react": "^2.2.0",
+    "botid": "^1.5.11",
+    "jsonwebtoken": "^9.0.3",
+    "lottie-react": "^2.4.1",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.0.0",
+    "typescript": "^5.6.0"
+  }
+}

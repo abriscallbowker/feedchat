@@ -1,0 +1,12 @@
+Access to fetch at 'https://api.feedchat.io/org/accentColor?hostname=feedback.wellboy.co' from origin 'https://feedback.wellboy.co' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.Understand this error
+api.feedchat.io/org/accentColor?hostname=feedback.wellboy.co:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
+(index):1 Access to fetch at 'https://api.feedchat.io/org/colorPalette?hostname=feedback.wellboy.co' from origin 'https://feedback.wellboy.co' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.Understand this error
+api.feedchat.io/org/colorPalette?hostname=feedback.wellboy.co:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
+(index):1 Access to fetch at 'https://api.feedchat.io/org/supportLink/?hostname=feedback.wellboy.co' from origin 'https://feedback.wellboy.co' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.Understand this error
+api.feedchat.io/org/supportLink/?hostname=feedback.wellboy.co:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
+(index):1 Access to fetch at 'https://api.feedchat.io/org/profilepic?hostname=feedback.wellboy.co' from origin 'https://feedback.wellboy.co' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.Understand this error
+api.feedchat.io/org/profilepic?hostname=feedback.wellboy.co:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
+(index):1 Access to fetch at 'https://api.feedchat.io/org/website/?hostname=feedback.wellboy.co' from origin 'https://feedback.wellboy.co' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.Understand this error
+api.feedchat.io/org/website/?hostname=feedback.wellboy.co:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
+(index):1 Access to fetch at 'https://api.feedchat.io/org/chat/?hostname=feedback.wellboy.co' from origin 'https://feedback.wellboy.co' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.Understand this error
+api.feedchat.io/org/chat/?hostname=feedback.wellboy.co:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
