@@ -38,6 +38,18 @@ This codebase contains a self-contained workspace: **public chat** (`apps/public
 - Node.js 20+
 - npm 10+
 
+Currently, the code integrates with OpenAI APIs for LLM functionality and Firebase for authentication and data storage. 
+
+To integrate with OpenAI, you will need to create an account at [https://platform.openai.com](https://platform.openai.com) and create two API keys: one for powering Feedchat responses and another for chat summarisation and sentiment scoring -> see `.env.example`
+
+To integrate with Firebase, you will need to create a project at [https://console.firebase.google.com/](https://console.firebase.google.com/) and create the following apps/tools inside your project: 
+
+- Authentication (add the Sign-in methods: email/password and Google)
+- Firestore (simply follow the instructions to create a production database in the region you desire)
+- Realtime Database (simply follow the instructions to create a production database in the region you desire)
+
+You do not need to mess with rules or any other logic inside Firebase. The server code handles all document logic. 
+
 # Quick start
 
 1. Clone/fork repo
@@ -88,8 +100,9 @@ Tenant-scoped routes (e.g. feedback.example.com) still validate the browser `Ori
 
 | Path | Role |
 |------|------|
-| `apps/public` | Next.js widget + `pages/api/*` → `@feedchat/server` |
-| `apps/dashboard` | Next.js admin UI |
+| `apps/public` | Feedback page |
+| `apps/public/api` | API logic + routes |
+| `apps/dashboard` | Admin dashboard |
 | `apps/server` | Express API implementation (`@feedchat/server`) |
 | `packages/ui` | Shared React components |
 | `packages/api-base` | Shared `resolveFeedchatApiBase()` for clients |
