@@ -1,19 +1,48 @@
 {
   "name": "feedchat",
-  "private": true,
-  "packageManager": "npm@10.9.2",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
+  "version": "0.1.0",
+  "description": "Framework-agnostic feedback widget Web Component. Collects feedback and emits a typed browser event — no backend required.",
+  "type": "module",
+  "main": "./dist/feedchat.js",
+  "module": "./dist/feedchat.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/feedchat.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "lint": "turbo lint",
-    "typecheck": "turbo typecheck"
+    "dev": "vite",
+    "build": "pnpm run typecheck && vite build",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "feedback",
+    "widget",
+    "web-component",
+    "lit",
+    "custom-element"
+  ],
+  "author": "",
+  "license": "MIT",
+  "sideEffects": [
+    "./dist/feedchat.js"
+  ],
+  "dependencies": {
+    "html-to-image": "^1.11.13",
+    "lit": "^3.2.1"
   },
   "devDependencies": {
-    "turbo": "^2.0.0",
-    "typescript": "^5.6.0"
-  }
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11",
+    "vite-plugin-dts": "^4.5.0"
+  },
+  "packageManager": "pnpm@11.15.1+sha512.81350b07e53c9538a02f1f2303b4290fa2d7be04e56e2a970c4cc4b417dc761de196edabd49d55c7dc9580db81007c44143e4e3d7e462b3000d23c255122d065"
 }

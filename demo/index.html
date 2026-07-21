@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedchat demo</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'Segoe UI', 'Helvetica Neue', ui-sans-serif, system-ui,
+          sans-serif;
+        color: #1a2b2e;
+        background: #fafafa;
+      }
+
+      main {
+        max-width: 40rem;
+        padding: 4rem 1.5rem;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: 2rem;
+        letter-spacing: -0.03em;
+      }
+
+      p {
+        margin: 0;
+        color: #5c7277;
+        line-height: 1.55;
+      }
+
+      #log {
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 1px solid #d5e0e3;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.72);
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 12px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        min-height: 6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Feedchat demo</h1>
+      <p>
+        Click the Feedback launcher, write a note, and optionally capture part of
+        the page as a screenshot. The event payload is logged below.
+      </p>
+      <pre id="log">Waiting for feedchat:submit…</pre>
+    </main>
+
+    <feedchat-widget
+      user-id="demo-user"
+      app-version="0.1.0"
+      data-env="local"
+    ></feedchat-widget>
+
+    <script type="module">
+      import '../src/index.ts'
+
+      const log = document.getElementById('log')
+      const widget = document.querySelector('feedchat-widget')
+
+      widget.addEventListener('feedchat:submit', (event) => {
+        const { message, sentiment, images, context, meta } = event.detail
+        log.textContent = JSON.stringify(
+          {
+            message,
+            sentiment,
+            images: images.map((file) => ({
+              name: file.name,
+              type: file.type,
+              size: file.size,
+            })),
+            context,
+            meta,
+          },
+          null,
+          2,
+        )
+        console.log('feedchat:submit', event.detail)
+      })
+    </script>
+  </body>
+</html>
