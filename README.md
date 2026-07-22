@@ -24,10 +24,22 @@ pnpm add feedchat
   })
 </script>
 
-<feedchat-widget user-id="u_123" app-version="1.4.0" data-plan="pro"></feedchat-widget>
+<feedchat-widget
+  label="Send feedback"
+  user-id="u_123"
+  app-version="1.4.0"
+  data-plan="pro"
+></feedchat-widget>
 ```
 
 Works in any framework that can render custom elements (React, Vue, Svelte, plain HTML).
+
+| Attribute | Description |
+| --- | --- |
+| `label` | Launcher button text (default: `Feedback`) |
+| `user-id` | Optional; included in submit `meta` |
+| `app-version` | Optional; included in submit `meta` |
+| `data-*` | Any `data-*` attributes are mirrored into submit `meta` |
 
 ## Event payload
 
@@ -70,6 +82,12 @@ feedchat-widget {
   --feedchat-text: #1a2b2e;
   --feedchat-muted: #5c7277;
   --feedchat-font: 'Segoe UI', 'Helvetica Neue', ui-sans-serif, system-ui, sans-serif;
+
+  /* Launcher button */
+  --feedchat-launcher-bg: #000;
+  --feedchat-launcher-bg-hover: #111;
+  --feedchat-launcher-color: #fff;
+  --feedchat-launcher-radius: 999px;
 }
 ```
 

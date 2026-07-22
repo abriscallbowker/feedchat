@@ -15,6 +15,10 @@ export class FeedchatWidget extends LitElement {
   @property({ attribute: 'app-version' })
   appVersion?: string
 
+  /** Text shown on the floating launcher button */
+  @property({ attribute: 'label' })
+  label = 'Feedback'
+
   @state()
   private open = false
 
@@ -397,7 +401,7 @@ export class FeedchatWidget extends LitElement {
                     stroke-linejoin="round"
                   />
                 </svg>
-                Feedback
+                ${this.label}
               </button>
             `}
       </div>

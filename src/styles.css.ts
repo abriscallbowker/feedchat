@@ -14,6 +14,10 @@ export const styles = css`
     --feedchat-radius: 14px;
     --feedchat-font: 'Segoe UI', 'Helvetica Neue', ui-sans-serif, system-ui,
       sans-serif;
+    --feedchat-launcher-bg: #000;
+    --feedchat-launcher-bg-hover: #111;
+    --feedchat-launcher-color: #fff;
+    --feedchat-launcher-radius: 999px;
 
     position: fixed;
     z-index: 2147483000;
@@ -296,14 +300,14 @@ export const styles = css`
   .launcher {
     appearance: none;
     border: 0;
-    background: #000;
-    color: #fff;
+    background: var(--feedchat-launcher-bg);
+    color: var(--feedchat-launcher-color);
     font: inherit;
     font-size: 14px;
     font-weight: 650;
     letter-spacing: -0.01em;
     padding: 12px 18px;
-    border-radius: 999px;
+    border-radius: var(--feedchat-launcher-radius);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -320,7 +324,7 @@ export const styles = css`
   }
 
   .launcher:hover {
-    background: #111;
+    background: var(--feedchat-launcher-bg-hover);
     transform: scale(1.02);
   }
 
