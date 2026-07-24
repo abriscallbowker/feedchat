@@ -32,6 +32,14 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abriscallbowker/feedchat.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "sideEffects": [
     "./dist/feedchat.js"
   ],
