@@ -177,7 +177,7 @@ export const styles = css`
     border: 0;
     outline: none;
     font: inherit;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--feedchat-text);
     background: transparent;
     padding: 2px;
